@@ -1,0 +1,10 @@
+numpy
+pandas
+scikit-learn
+scipy
+yfinance
+matplotlib
+python-dotenv
+apify-client
+tavily-python
+pytest

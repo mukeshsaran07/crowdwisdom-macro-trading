@@ -1,0 +1,52 @@
+{
+  "overall_recent_sentiment": 0.15290645432335345,
+  "overall_recent_label": "Neutral",
+  "recent_article_count": 20,
+  "total_article_count": 33,
+  "theme_count": 5,
+  "macro_event_summary": {
+    "event_count": 283,
+    "average_surprise": -13596.089686098667,
+    "positive_surprises": 92,
+    "negative_surprises": 98
+  },
+  "themes": [
+    {
+      "theme": "Employment",
+      "recent_7d_sentiment": -0.07422459893048129,
+      "previous_7d_sentiment": 0.2,
+      "sentiment_change": -0.2742245989304813,
+      "direction": "Deteriorating"
+    },
+    {
+      "theme": "Monetary Policy",
+      "recent_7d_sentiment": 0.3516624796281733,
+      "previous_7d_sentiment": 1.0,
+      "sentiment_change": -0.6483375203718267,
+      "direction": "Deteriorating"
+    },
+    {
+      "theme": "Financial Markets",
+      "recent_7d_sentiment": 0.0,
+      "previous_7d_sentiment": null,
+      "sentiment_change": null,
+      "direction": "Insufficient data"
+    },
+    {
+      "theme": "Growth",
+      "recent_7d_sentiment": 0.20930232558139536,
+      "previous_7d_sentiment": null,
+      "sentiment_change": null,
+      "direction": "Insufficient data"
+    },
+    {
+      "theme": "Inflation",
+      "recent_7d_sentiment": -1.0,
+      "previous_7d_sentiment": null,
+      "sentiment_change": null,
+      "direction": "Insufficient data"
+    }
+  ],
+  "method": "Deterministic keyword-based sentiment scoring with theme classification.",
+  "lookback_period": "7 days"
+}
