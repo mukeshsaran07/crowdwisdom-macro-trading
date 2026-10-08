@@ -1,41 +1,28 @@
-# Project Plan: CrowdWisdomTrading Quantitative Data Scientist MVP
+# Project Plan: CrowdWisdomTrading Macro-Aware Trading ML MVP
 
-## Project Objective
-Build a simple, professional Minimum Viable Product (MVP) to demonstrate quantitative data science skills within a 3-day timeline. The project involves gathering macroeconomic data, engineering features, storing data in SQLite, and predicting future trade P&L or win rate using a chronological walk-forward validation strategy. Finally, evaluate the performance using standard trading metrics (Sharpe, Sortino, Max Drawdown, Win Rate) and generate visualizations and reports.
+## Objective
 
-## Proposed Architecture
-- **Data Ingestion**: Use Apify for macroeconomic event data (last 180 days) and Exa/Tavily for recent economic news.
-- **Storage**: SQLite database (`macro_trading.db`) using SQLAlchemy to store and join historical trading logs, macro events, and news.
-- **Data Processing & Feature Engineering**: Python, pandas, scikit-learn for cleaning and constructing time-based and macroeconomic features.
-- **Modeling**: Scikit-learn models (e.g., Random Forest or Gradient Boosting) evaluated using chronological walk-forward (out-of-sample) validation.
-- **Metrics & Visualization**: Matplotlib and pandas to compute standard trading metrics and generate visualizations showing macro sentiment changes.
-- **Reporting**: Final markdown/PDF evaluation report and a one-page macroeconomic outlook.
-- **Environment**: Python, `.env` for secrets, and a fully reproducible GitHub repository.
+Build an MVP to evaluate trading strategies using market data, macroeconomic events, economic news, and machine learning.
 
-## Required Data
-1. **Historical Trading Logs**: Needs to be provided or acquired (currently MISSING in workspace).
-2. **Strategy Names/Parameter Permutations**: Needs to be provided alongside trading logs (currently MISSING).
-3. **Macroeconomic Event Data**: To be scraped using Apify for the last ~180 days.
-4. **Economic News**: To be retrieved using Tavily/Exa APIs.
+## Data Sources
 
-## Day 1 Tasks: Setup & Data Ingestion
-- Set up project structure, Git repository, and virtual environment.
-- Create `.env` and `.env.example`.
-- Obtain or clarify the source of the historical trading logs.
-- Implement Apify scraper for macroeconomic events.
-- Implement Tavily/Exa integration for economic news.
-- Design and create the SQLite database schema.
+- **Market Data:** SPY daily data used as a transparent proxy because official trading logs were unavailable.
+- **Strategies:** SMA 5/20, 10/30, 20/50, and 50/100.
+- **Macro Data:** U.S. economic events from Apify.
+- **News:** Recent macroeconomic news from Tavily.
 
-## Day 2 Tasks: Data Processing, Feature Engineering & Modeling
-- Store scraped data and trading logs into the SQLite database.
-- Join datasets.
-- Implement time-based and macroeconomic feature engineering.
-- Develop the predictive model (P&L or win rate prediction) using scikit-learn.
-- Implement chronological walk-forward validation (no random `train_test_split`).
+## Pipeline
 
-## Day 3 Tasks: Evaluation, Visualization & Reporting
-- Calculate trading metrics: Sharpe Ratio, Sortino Ratio, Maximum Drawdown, Win Rate.
-- Generate visual matrix/charts showing macro sentiment changes over time.
-- Draft the one-page macroeconomic outlook.
-- Draft the final evaluation report.
-- Code cleanup, documentation, and final repository review.
+```text
+Market Data + Macro Events + News
+              ↓
+      Feature Engineering
+              ↓
+       ML Walk-Forward
+          Validation
+              ↓
+       Trade Selection
+              ↓
+     Strategy Evaluation
+              ↓
+        Final Report
